@@ -8,24 +8,12 @@ class Courses {
 		}
 }
 
-class ECE { //extend the parent class here 
+class ECE extends Courses { //extend the parent class here 
 	public String displayCourseDetails(String dept) {
 		// write or edit your code here 
-		String commonSubjects = "";//call the parent function after using inheritence
-		String subject1 = ""; //write the specific subjects name here
-		String subject2 = ""; //write the specific subjects name here
-		
-		String specificSubjects = " specific subjects are:\n4. "+subject1+"\n5. "+subject2;
-		return commonSubjects+dept+specificSubjects;
-		
-	}
-}
-class Mechanical { //extend the parent class here 
-	public String displayCourseDetails(String dept) {
-		// write or edit your code here 
-		String commonSubjects = "";//call the parent function after using inheritence
-		String subject1 = "Fluid Mechanics"; //write the specific subjects name here
-		String subject2 = "Thermodynamics"; //write the specific subjects name here
+		String commonSubjects = super.displayCourseDetails(dept);//call the parent function after using inheritence
+		String subject1 = "Microprocessor"; //write the specific subjects name here
+		String subject2 = "Linear Integrated Circuits"; //write the specific subjects name here
 		
 		String specificSubjects = " specific subjects are:\n4. "+subject1+"\n5. "+subject2;
 		return commonSubjects+dept+specificSubjects;	
@@ -33,13 +21,29 @@ class Mechanical { //extend the parent class here
 	}
 
 }
-class CSE  { //extend the parent class here 
+
+	class Mechanical extends Courses{ //extend the parent class here 
+		public String displayCourseDetails(String dept) {
+			// write or edit your code here 
+			String commonSubjects = super.displayCourseDetails(dept);//call the parent function after using inheritence
+			String subject1 = "Fluid Mechanics"; //write the specific subjects name here
+			String subject2 = "Thermodynamics"; //write the specific subjects name here
+			
+			String specificSubjects = " specific subjects are:\n4. "+subject1+"\n5. "+subject2;
+			return commonSubjects+dept+specificSubjects;	
+		
+		}
+	
+	}
+
+
+class CSE extends Courses { //extend the parent class here 
 	public String displayCourseDetails(String dept) {
 		
 		// write or edit your code here 
-		String commonSubjects = "";//call the parent function after using inheritence
-		String subject1 = ""; //write the specific subjects name here
-		String subject2 = ""; //write the specific subjects name here
+		String commonSubjects = super.displayCourseDetails(dept);//call the parent function after using inheritence
+		String subject1 = "Network Theory"; //write the specific subjects name here
+		String subject2 = "Operating Systems"; //write the specific subjects name here
 		
 		String specificSubjects = " specific subjects are:\n4. "+subject1+"\n5. "+subject2;
 		return commonSubjects+dept+specificSubjects;		
